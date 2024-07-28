@@ -8,4 +8,24 @@ button {
     margin-right: 5px;
 }
 
+.alert {
+    height: 500px;
+    display: flex;
+    background-color: grey;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
 
+.alert img {
+    /* width: 150px;
+    height: calc(20% - 20px); */
+    object-fit: cover;
+}
+
+.alert p {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px; /* Ajustar el valor según el espacio necesario */
+}

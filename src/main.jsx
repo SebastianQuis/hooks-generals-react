@@ -3,15 +3,13 @@ import ReactDOM from 'react-dom/client'
 
 import './index.css'
 
-// import { HooksApp } from './HooksApp.jsx'
-// import { CounterApp } from './useState/CounterApp.jsx'
-// import { CounterCustomHook } from './hooks/CounterCustomHook.jsx'
-// import { SimpleForm } from './02-useEffect/SimpleForm.jsx'
-
-import { CustomPokemonHook } from './03-pokemon/CustomPokemonHook.jsx'
+// import { Memorize } from './06-memos/Memorize.jsx'
+// import { MemorizeHook } from './06-memos/MemorizeHook.jsx'
+// import { CallBackHook } from './06-memos/CallBackHook.jsx'
+import { Padre } from './07-tarea-memo/Padre.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
-    <CustomPokemonHook />
+    <Padre />
   // </React.StrictMode>,
 )

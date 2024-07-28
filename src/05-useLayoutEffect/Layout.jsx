@@ -1,20 +1,20 @@
-
 import React from 'react'
-import { useFetch } from '../hooks/useFetch'
-import { useCounter } from '../hooks/useCounter'
-import { LoadingMessage, PokemonCard } from './index';
+
+import { LoadingMessage, PokemonCard } from '../03-pokemon/index';
+import { useCounter } from '../hooks/useCounter';
+import { useFetch } from '../hooks/useFetch';
 
 
-export const CustomPokemonHook = () => {
+export const Layout = () => {
 
-    // llamar metodo
-    let {count, increment, decrement} = useCounter(1);
-    let {data, isLoading, hasError} = 
+    const {count, increment, decrement} = useCounter(1);
+    const {data, isLoading, hasError} = 
         useFetch(`https://pokeapi.co/api/v2/pokemon/${count}`)
 
+        
     return (
         <>
-            <h1>CustomPokemonHook</h1>
+            <h1>Layout</h1>
             
             <hr />
             {
