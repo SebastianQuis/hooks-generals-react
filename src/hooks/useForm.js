@@ -18,6 +18,7 @@ export const useForm = ( initForm = {} ) => {
     const onResetForm = () => setFormState( initForm )
 
     return {
+        ...formState,
         formState,
         onInputChange,
         onResetForm
