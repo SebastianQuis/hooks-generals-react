@@ -16,7 +16,10 @@ export const AddTodoForm = ( {onNewTodo} ) => {
   const onFormSubmit = (event) => {
     event.preventDefault();
     
-    if( description.length <= 1 ) return;
+    if( description.length <= 1 ) {
+      alert('La tarea debe contener al menos de 2 caracteres')
+      return;
+    } 
     const newTodo = {
       id: new Date().getTime(),
       todo: description,

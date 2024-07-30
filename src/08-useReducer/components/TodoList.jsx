@@ -4,10 +4,12 @@ import { TodoItem } from './TodoItem'
 
 export const TodoList = ( {todos = [], onDeleteTodo, onDoneTodo} ) => {
 
+    const todosSorted = [ ...todos ].sort( (a,b) => a.done - b.done )
+    
     return (
         <ul className='list-group' > 
         {
-            todos.map( todo =>  (
+            todosSorted.map( todo =>  (
                 <TodoItem 
                     key          = { todo.id } 
                     todo         = { todo }
