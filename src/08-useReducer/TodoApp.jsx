@@ -1,21 +1,24 @@
-
 import { TodoList } from './components/TodoList';
 import { AddTodoForm } from './components/AddTodoForm';
 import { useTodo } from '../hooks/useTodo';
 
-
-
 export const TodoApp = () => {
 
-    const {todos, allTodosCount, pendingTodosCount, onNewTodo, onDeleteTodo, onDoneTodo} = useTodo();
+    const {
+        todos, 
+        allTodosCount, 
+        pendingTodosCount, 
+        onNewTodo, 
+        onDeleteTodo, 
+        onDoneTodo
+    } = useTodo();
 
     return (
     <>
-        <h4>ToDo ( {allTodosCount} ) - <span> Pendiente ( {JSON.stringify(pendingTodosCount)} ) </span></h4>
+        <h4 role='h4' >ToDo ( {allTodosCount} ) - <span> Pendiente ( {JSON.stringify(pendingTodosCount)} ) </span></h4>
         <hr />
 
-        <div className="row">
-            
+        <div className="row">            
             <div className="col-7">
                 <TodoList 
                     todos={ todos } 
@@ -31,9 +34,7 @@ export const TodoApp = () => {
                     onNewTodo={onNewTodo} 
                 />
             </div>
-
         </div>
-
     </>
   )
 }

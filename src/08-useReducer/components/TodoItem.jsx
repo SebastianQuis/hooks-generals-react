@@ -4,10 +4,12 @@ export const TodoItem = ( { todo, onDeleteTodo, onDoneTodo  } ) => {
   
     return (
         <li
+            role='li'
             className='list-group-item d-flex justify-content-between'
             onClick={ ( value ) => onDoneTodo( todo ) }
         >
             <span 
+                role='span'
                 className={
                     `align-self-center 
                     ${ todo.done ? 'text-decoration-line-through' : '' }`

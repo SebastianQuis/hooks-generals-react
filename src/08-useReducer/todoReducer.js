@@ -1,6 +1,6 @@
 
 
-export const todoReducer = ( initialState, action ) => {
+export const todoReducer = ( initialState = [], action ) => {
 
     switch ( action.type ) {
         case '[TODO] addTodo':
@@ -8,11 +8,11 @@ export const todoReducer = ( initialState, action ) => {
             // throw new Error( 'Falta implementar addTodo' );
         
         case '[TODO] deleteTodo':
-            return initialState.filter( state => state !== action.payload );
+            return initialState.filter( state => state.id !== action.payload.id );
         
         case '[TODO] doneTodo':
             return initialState.map( state => {
-                if (state === action.payload  ) {
+                if (state.id === action.payload.id  ) {
                     return {
                         ...state,
                         done: !state.done
@@ -22,7 +22,7 @@ export const todoReducer = ( initialState, action ) => {
             });
 
         default:
-            break;
+            return initialState;
     }
 
 }

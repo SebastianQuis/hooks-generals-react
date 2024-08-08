@@ -14,8 +14,8 @@ export const PokemonCard = ( {data} ) => {
 
     useLayoutEffect( () => {
       const {height, width} = pRef.current.getBoundingClientRect();
-      // todo - hallando las dimensiones de los componentes
-      console.log(`${height} - ${width}`);
+      // // todo - hallando las dimensiones de los componentes
+      // console.log(`${height} - ${width}`);
     }, )
     
 

@@ -15,11 +15,19 @@ export const useTodo = () => {
     
     
     const onNewTodo = ( todo ) => {
-        const action = {
-            type: '[TODO] addTodo',
-            payload: todo
-        };
-        dispatch( action );
+        const todoArr = JSON.parse( localStorage.getItem('todos') ) || [];
+        const todoExists = todoArr.some( value =>  value.todo === todo.todo);
+
+        if( !todoExists ) {
+            const action = {
+                type: '[TODO] addTodo',
+                payload: todo
+            };
+            dispatch( action );
+        } else {
+            alert('El TODO ya existe.');
+        }
+            
     }
 
     const onDeleteTodo = ( todo ) => {

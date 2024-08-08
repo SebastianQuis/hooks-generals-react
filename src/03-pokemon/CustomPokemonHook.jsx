@@ -12,6 +12,8 @@ export const CustomPokemonHook = () => {
     let {data, isLoading, hasError} = 
         useFetch(`https://pokeapi.co/api/v2/pokemon/${count}`)
 
+    console.log(data);
+
     return (
         <>
             <h1>CustomPokemonHook</h1>
@@ -25,6 +27,7 @@ export const CustomPokemonHook = () => {
 
             <button
                 className='btn btn-primary mt-2'
+                // disabled= { true }
                 onClick={() => decrement()}
             > 
                 Anterior
