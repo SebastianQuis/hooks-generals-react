@@ -3,18 +3,18 @@ import { UserContext } from './context/UserContext'
 
 export const LoginPage = () => {
 
-    const { user } = useContext( UserContext )
+    const { user, setUser } = useContext( UserContext )
 
     return (
         <>
             <h1>LoginPage</h1>
             <hr />
-            {/* <code>
+            <code role='code'>
                 {
                     JSON.stringify(user)
                 }
-            </code> */}
-            {
+            </code>
+            {/* {
                 (user) && 
                     (
                     <div className="card" style={{ width:"18rem" }}>
@@ -25,7 +25,20 @@ export const LoginPage = () => {
                         </div>
                     </div>
                     )
-            }
+            } */}
+
+            <button 
+                className='btn btn-primary mt-3'
+                onClick={ () => setUser( 
+                    {
+                        id: 123,
+                        name: 'sebastian',
+                        correo: 'sebastian@google.com'
+                    }
+                ) }
+                >
+                Agregar usuario
+            </button>
         </>  
     )
 }

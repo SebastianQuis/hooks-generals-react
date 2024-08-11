@@ -9,7 +9,7 @@ import { AboutPage } from './AboutPage'
 import { Page404 } from './Page404'
 import { NavBar } from './components/NavBar'
 
-import '../index.css'
+// import '../index.css';
 
 export const MainApp = () => {
   return (

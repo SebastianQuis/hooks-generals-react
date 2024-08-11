@@ -18,7 +18,7 @@ import { CustomPokemonHook } from './03-pokemon/CustomPokemonHook.jsx';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     {/* // <React.StrictMode> */}
-      <TodoApp />
+      <MainApp />
       {/* <CustomPokemonHook /> */}
     {/* // </React.StrictMode>, */}
   </BrowserRouter>
